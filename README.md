@@ -7,7 +7,7 @@ Created in order to support the hypothesis that much of the Dark Knight's dialog
 ## Example
 
 ```
-$ python batman.py
+$ python batbot.py
 
 You wanted me. Here I am.
 > What do you want?
