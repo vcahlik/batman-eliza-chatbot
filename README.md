@@ -6,6 +6,8 @@ Created in order to support the hypothesis that much of the Dark Knight's dialog
 
 ## Example
 
+Lines starting with `>` contain user input.
+
 ```
 $ python batbot.py
 
