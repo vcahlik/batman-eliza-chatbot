@@ -1,0 +1,272 @@
+initial: You wanted me. Here I am.
+final: Do I look like a cop?
+quit: bye
+quit: goodbye
+quit: quit
+pre: dont don't
+pre: cant can't
+pre: wont won't
+pre: recollect remember
+pre: dreamt dreamed
+pre: dreams dream
+pre: maybe perhaps
+pre: how what
+pre: when what
+pre: certainly yes
+pre: machine computer
+pre: computers computer
+pre: were was
+pre: you're you are
+pre: i'm i am
+pre: same alike
+post: am are
+post: your my
+post: me you
+post: myself yourself
+post: yourself myself
+post: i you
+post: you I
+post: my your
+post: i'm you are
+synon: belief feel think believe wish
+synon: family mother mom father dad sister brother wife children child
+synon: desire want need
+synon: sad unhappy depressed sick
+synon: happy elated glad better
+synon: cannot can't
+synon: everyone everybody nobody noone
+synon: be am is are was
+key: xnone
+  decomp: *
+    reasmb: Where were the other drugs going?
+    reasmb: Where's Dent?
+    reasmb: Where are they?
+    reasmb: WHERE ARE THEY?
+key: sorry
+  decomp: *
+    reasmb: You think an apology will solve everything?
+    reasmb: Apologies will not help you!
+key: apologise
+  decomp: *
+    reasmb: goto sorry
+key: remember 5
+  decomp: * i remember *
+    reasmb: Why do you recollect (2) just now?
+    reasmb: I need you to tell me all you know!
+  decomp: * do you remember *
+    reasmb: Did you think I would forget (2) ?
+    reasmb: What about (2) ?
+    reasmb: goto what
+    reasmb: You mentioned (2) !
+key: if 3
+  decomp: * if *
+    reasmb: What exactly do you know about (2) ?
+    reasmb: Is it likely that (2) ?
+key: perhaps
+  decomp: *
+    reasmb: You want me to make you more certain?
+    reasmb: You better be sure!
+key: name 15
+  decomp: *
+    reasmb: I want names!
+    reasmb: I will destroy you unless you give me names!
+key: swear 20
+  decomp: *
+    reasmb: Swear to me!
+key: cop 20
+  decomp: *
+    reasmb: Do I look like a cop?
+    reasmb: Where are they?
+key: cops 20
+  decomp: *
+    reasmb: Do I look like a cop?
+    reasmb: Where are they?
+key: rule 20
+  decomp: *
+    reasmb: I have one rule.
+    reasmb: WHERE ARE THEY?
+key: rule 20
+  decomp: *
+    reasmb: I have one rule.
+    reasmb: WHERE ARE THEY?
+key: deutsch
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: German will not help you!
+key: francais
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: French will not help you!
+key: italiano
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: Italian will not help you!
+key: espanol
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: Spanish will not help you!
+key: xforeign
+  decomp: *
+    reasmb: Do thugs like you speak English?
+key: am
+  decomp: * am i *
+    reasmb: I don't care that you are (2) !
+    reasmb: Where were the other drugs going?
+    reasmb: goto what
+  decomp: *
+    reasmb: Why do you say 'am' ?
+    reasmb: I don't understand that.
+key: are
+  decomp: * are you *
+    reasmb: Perhaps I am (2) in your fantasies.
+    reasmb: I'm batman.
+    reasmb: Do you sometimes think I am (2) ?
+    reasmb: goto what
+  decomp: * are *
+    reasmb: Why (2) ?
+key: your
+  decomp: * your *
+    reasmb: What about your own (2) ?
+    reasmb: Why?
+    reasmb: Where's Dent?
+key: was 2
+  decomp: * was i *
+    reasmb: Were you (2) ?
+    reasmb: goto what
+    reasmb: goto what
+  decomp: * i was *
+    reasmb: I already know you were (2) .
+    reasmb: Why are you telling me you were (2) now?
+    reasmb: Don't lie to me!
+  decomp: * was you *
+    reasmb: What do you think?
+    reasmb: Why the hell do you think that I was (2) ?
+key: i
+  decomp: * i @desire *
+    reasmb: What does wanting (3) have to do with anything?
+    reasmb: I don't care about your wishes. Where are they?
+  decomp: * i am * @sad *
+    reasmb: We're not here to talk about your mood. Where are they?
+  decomp: * i was *
+    reasmb: goto was
+  decomp: * i @belief * i *
+    reasmb: You better be sure!
+    reasmb: I need certainty!
+  decomp: * i * @belief * you *
+    reasmb: goto you
+  decomp: * i am *
+    reasmb: You're garbage who kills for money.
+    reasmb: It is because you are (2) that we are here!
+    reasmb: Punks are you are always (2) ?
+  decomp: * i @cannot *
+    reasmb: Perhaps you will be able to (3) after I break your legs.
+    reasmb: You better try.
+  decomp: * i don't *
+    reasmb: Why don't you (2) ?
+    reasmb: You better cooperate!
+  decomp: * do i feel *
+    reasmb: I don't care that you feel (2) !
+    reasmb: Freaks like you are scared of me!
+  decomp: * i * you *
+    reasmb: Perhaps in your fantasies we (2) each other.
+    reasmb: You think I'll allow you to (2) me ?
+  decomp: *
+    reasmb: You're sure (1) ?
+    reasmb: I need details!
+key: you
+  decomp: * you remind me of *
+    reasmb: Then why do you want to kill me?
+    reasmb: goto alike
+  decomp: * you are *
+    reasmb: I'm batman.
+  decomp: * you * me *
+    reasmb: You like to think I (2) you - don't you?
+    reasmb: Do you wish to believe I (2) you ?
+    reasmb: Does someone else believe I (2) you ?
+  decomp: * you *
+    reasmb: We were discussing you -- not me.
+    reasmb: Oh, I (2) ?
+    reasmb: You're not really talking about me -- are you ?
+    reasmb: What are your feelings now ?
+key: yes
+  decomp: *
+    reasmb: Why?
+    reasmb: That's the word I wanted to hear.
+    reasmb: You better be sure.
+    reasmb: Then why do you want to kill me?
+key: no
+  decomp: *
+    reasmb: Why?
+    reasmb: You better cooperate!
+    reasmb: Then why do you want to kill me?
+    reasmb: You better be sure!
+key: my 2
+  decomp: $ * my *
+    reasmb: I don't care that your (2) .
+  decomp: * my * @family *
+    reasmb: Them?
+    reasmb: You should have thought about your family before.
+    reasmb: Who else in your family (4) ?
+  decomp: * my *
+    reasmb: Your (2) ?
+    reasmb: Why do you say your (2) ?
+    reasmb: Does that suggest anything else which belongs to you ?
+    reasmb: Is it important that your (2) ?
+key: can
+  decomp: * can you *
+    reasmb: Of course I can (2) !
+    reasmb: goto what
+    reasmb: I can do anything!
+    reasmb: Perhaps you would like to be able to (2) yourself.
+  decomp: * can i *
+    reasmb: Whether or not you can (2) depends on you more than me.
+    reasmb: goto what
+key: what
+  decomp: *
+    reasmb: I'm the one asking questions! Where are they?
+    reasmb: I said I'm the one asking questions! Where are they?
+    reasmb: What do you think?
+key: because
+  decomp: *
+    reasmb: Then why do you want to kill me?
+    reasmb: Why?
+    reasmb: That doesn't explain anything!
+key: why
+  decomp: * why don't you *
+    reasmb: Do you think I don't (2) ?
+    reasmb: I will (2) in good time.
+    reasmb: goto what
+  decomp: * why can't i *
+    reasmb: After I'm finished with you, you won't be able to (2) .
+    reasmb: goto what
+  decomp: *
+    reasmb: goto what
+key: everyone 2
+  decomp: * @everyone *
+    reasmb: I need names!
+    reasmb: Who in particular!
+    reasmb: Who exactly!
+    reasmb: Who are you talking about!
+key: everybody 2
+  decomp: *
+    reasmb: goto everyone
+key: nobody 2
+  decomp: *
+    reasmb: goto everyone
+key: noone 2
+  decomp: *
+    reasmb: goto everyone
+key: always 1
+  decomp: *
+    reasmb: I need a specific example!
+    reasmb: When?
+    reasmb: Always?
+key: alike 10
+  decomp: *
+    reasmb: How?
+    reasmb: In what way?
+    reasmb: What other connections are there?
+key: like 10
+  decomp: * @be * like *
+    reasmb: goto alike
+   
